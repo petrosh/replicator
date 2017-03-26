@@ -1,0 +1,10 @@
+---
+permalink: /
+layout: default
+---
+{% for sf in site.pages %}{% if sf.path contains 'css' %}
+<p>
+  <input type="checkbox" id="css{{ forloop.index }}" value="{{ sf.url }}">
+  <label for="css{{ forloop.index }}">{{ sf.name }}</label><details><summary>code</summary>{% highlight css %}{{ sf.content }}{% endhighlight %}</details>
+</p>
+{% endif %}{% endfor %}
