@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Replicator</title>
+<meta charset="utf-8">
+<script src="/js/replicator.js"></script>
+
+{{ content }}
+
+{% capture footer %}{% include footer.md %}{% endcapture %}{{ footer | markdownify }}
