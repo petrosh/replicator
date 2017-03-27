@@ -1,13 +1,17 @@
 ---
+permalink: /code
+layout: default
 ---
+```cs
 cbList = document.querySelectorAll '[type="checkbox"]'
 head = document.querySelector 'head'
+codeCss = document.getElementById 'code-css'
 
 for cb in cbList
   cb.addEventListener 'click', (e) => zio e
 
 zio = (e) ->
-	code = document.querySelector("details [data-file='#{e.target.id}']")
+	code = document.querySelector("section [data-file='#{e.target.value}']")
 	if e.target.checked
 		el = document.createElement 'link'
 		el.rel = "stylesheet"
@@ -19,3 +23,4 @@ zio = (e) ->
 		head.removeChild find
 		if code then code.setAttribute 'hidden', ''
 	return
+```

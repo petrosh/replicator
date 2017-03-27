@@ -2,9 +2,23 @@
 permalink: /
 layout: default
 ---
+<details><summary>Selection</summary><ul>
 {% for sf in site.pages %}{% if sf.path contains 'css' %}
-<p>
+<li>
   <input type="checkbox" id="css{{ forloop.index }}" value="{{ sf.url }}">
-  <label for="css{{ forloop.index }}">{{ sf.name }}</label><details><summary>code</summary>{% highlight css %}{{ sf.content }}{% endhighlight %}</details>
-</p>
+  <label for="css{{ forloop.index }}">{{ sf.name }}: {{ sf.description }}</label>
+</li>
 {% endif %}{% endfor %}
+</ul>
+</details>
+
+<details><summary>code</summary>
+{% for sf in site.pages %}{% if sf.path contains 'css' %}
+<div data-file="css{{ forloop.index }}" hidden>
+	{% highlight css %}{{ sf.content }}{% endhighlight %}
+</div>
+{% endif %}
+{% endfor %}
+</details>
+
+<details><summary>Lorem</summary>{% capture lorem %}{% include lorem.html %}{% endcapture %}{{ lorem | markdownify }}</details>

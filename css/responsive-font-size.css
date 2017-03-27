@@ -1,0 +1,4 @@
+---
+description: Scale font-size with viewport
+---
+html { font-size: calc(0.6em + 1vw); }
