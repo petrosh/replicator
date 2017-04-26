@@ -2,14 +2,14 @@
 <title>Replicator</title>
 <meta charset="utf-8">
 <script src="{{ '/js/replicator.js?v=' | append: site.github.build_revision | absolute_url }}" defer></script>
-{% for sf in site.pages %}{% if sf.path contains 'css' %}<link rel="stylesheet" href="{{ sf.url }}">
+{% for sf in site.pages %}{% if sf.path contains 'css' %}<link rel="stylesheet" href="{{ sf.url | absolute_url }}">
 {% endif %}{% endfor %}
 
 <header>
 	<h1>Replicator</h1>
 	<nav>
 			<ul>
-				{% for p in site.data.menu %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+				{% for p in site.data.menu %}<li><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></li>
 				{% endfor %}
 			</ul>
 	</nav>

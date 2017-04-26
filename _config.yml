@@ -1,3 +1,5 @@
+baseurl: /replicator
+
 gems:
   - jekyll-github-metadata
   - jekyll-coffeescript

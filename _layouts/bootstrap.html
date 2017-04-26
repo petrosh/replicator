@@ -4,15 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css"> -->
 <!-- <link rel="stylesheet" href="../assets/bootstrap/bootstrap-theme.min.css"> -->
-<link rel="stylesheet" href="../css/bootstrap-custom.css">
-<link rel="stylesheet" href="../css/pygment_trac.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-custom.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/pygment_trac.css">
 <link rel="stylesheet" href="https://rawgit.com/nagoshiashumari/Rpg-Awesome/master/css/rpg-awesome.css">
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous" defer></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js" defer></script>
-{% if page.js %}{% for url in page.js %}<script src="../js/{{ url }}" charset="utf-8" defer></script>{% endfor %}{% endif %}
+<script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js" defer></script>
+{% if page.js %}{% for url in page.js %}<script src="{{ site.baseurl }}/js/{{ url }}" charset="utf-8" defer></script>{% endfor %}{% endif %}
 
 <header>
 <div class="container">

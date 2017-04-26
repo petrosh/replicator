@@ -7,7 +7,7 @@
 	<h1>Replicator</h1>
 	<nav>
 			<ul>
-				{% for p in site.data.menu %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+				{% for p in site.data.menu %}<li><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
 				{% endfor %}
 			</ul>
 	</nav>

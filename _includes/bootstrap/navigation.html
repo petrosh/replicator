@@ -1,5 +1,5 @@
 <ul class="nav nav-pills">
 	{% for link in include.menu %}
-	  <li role="presentation" {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.title }}</a></li>
+	  <li role="presentation" {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
 	{% endfor %}
 </ul>
