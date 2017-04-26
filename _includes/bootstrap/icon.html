@@ -1,0 +1,12 @@
+{% if include.icon.glyphicon %}
+<span class="glyphicon glyphicon-{{ include.icon.glyphicon }}" aria-hidden="true"></span>
+{% endif %}
+{% if include.icon["ra"] %}
+<i class="ra ra-{{ include.icon.ra }}"></i>
+{% endif %}
+{% if include.type=="ra" %}
+<i class="ra ra-{{ include.name }}"></i>
+{% endif %}
+{% if include.type=="glyphicon" %}
+<span class="glyphicon glyphicon-{{ include.name }}" aria-hidden="true"></span>
+{% endif %}

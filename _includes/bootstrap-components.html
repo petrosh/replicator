@@ -1,0 +1,118 @@
+And now: <a href="#">This is a Link</a> if you wonder.
+
+<h2>Well <small>This is a well</small></h2>
+<div class="well well-lg">I Like Wells</div>
+
+<h2>Panels <small>This is a panel</small></h2>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+
+<h2>Forms <small>This is a Form inside a well</small></h2>
+<form class="form-inline well well-lg">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword3">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" checked> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+<h2>Forms <small>This is a Form inside a panel</small></h2>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Form Panel</h3>
+  </div>
+  <div class="panel-body">
+		<form class="form-inline">
+		  <div class="form-group">
+		    <label class="sr-only" for="exampleInputPassword3">Password</label>
+		    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox" checked> Remember me
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-success">Sign in</button>
+		</form>
+  </div>
+</div>
+
+<h2>Buttons</h2>
+<p class="lead">Example of buttons</p>
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+<h1>Real Panel</h1>
+<p class="lead"><code>role="tabpanel" class="tab-pane" id="profile"</code></p>
+
+<div class="panel panel-default">
+  <!-- <div class="panel-heading">
+    <h3 class="panel-title">Character</h3>
+  </div> -->
+  <div class="panel-body">
+		<!-- Nav tabs -->
+	  <ul class="nav nav-pills" role="tablist">
+	    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+	    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+	  </ul>
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="home">
+					<h2>Home</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+	    <div role="tabpanel" class="tab-pane" id="profile">
+				<h2>Profile</h2>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+	    <div role="tabpanel" class="tab-pane" id="messages">{{ "## Messages
+
+| Option | Description |
+| -- | -- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |" | markdownify }}</div>
+	  </div>
+  </div>
+</div>
+
+{% highlight html %}
+<body class="mias">
+	<p>Ciao</p>
+</body>
+{% endhighlight %}
+
+{% highlight yaml %}
+character:
+-
+  name: "zio"
+{% endhighlight %}

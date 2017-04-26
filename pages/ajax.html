@@ -1,0 +1,18 @@
+---
+layout: bootstrap
+permalink: /ajax
+js: ajax.js
+---
+<div class="row">
+	<div class="col-md-9">
+		<div id="out">
+
+		</div>
+	</div>
+	<div class="col-md-3" role="complementary">
+		<div>
+			{% assign payload = page %}
+			{% include bootstrap/sidebar.html page=payload %}
+		</div>
+	</div>
+</div>

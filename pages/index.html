@@ -5,7 +5,7 @@ layout: default
 <details><summary>Selection</summary><ul>
 {% for sf in site.pages %}{% if sf.path contains 'css' %}
 <li>
-  <input type="checkbox" id="css{{ forloop.index }}" value="{{ sf.url }}">
+  <input type="checkbox" id="css{{ forloop.index }}" value="{{ sf.url | absolute_url }}">
   <label for="css{{ forloop.index }}">{{ sf.name }}: {{ sf.description }}</label>
 </li>
 {% endif %}{% endfor %}

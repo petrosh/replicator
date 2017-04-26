@@ -1,0 +1,22 @@
+---
+layout: bootstrap
+permalink: /bootstrap-double
+---
+<div class="row">
+	<div class="col-md-6">
+		<h1>Rolling Your Attributes</h1>
+		{% include bootstrap-components.html %}
+		{% capture lorem %}{% include lorem.html %}{% endcapture %}{{ lorem | markdownify }}
+	</div>
+	<div class="col-md-6">
+{% capture lorem %}{% include lorem.html %}{% endcapture %}{{ lorem | markdownify }}
+{% include bootstrap-components.html %}
+{{ "## Table
+
+| Option | Description |
+| -- | -- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |" | markdownify }}
+	</div>
+</div>

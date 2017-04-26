@@ -1,0 +1,167 @@
+---
+---
+// Bootstrap v3.3.7 (http://getbootstrap.com)
+// Copyright 2011-2016 Twitter, Inc.
+// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+// Core variables and mixins
+@import "bootstrap/variables"
+
+//  change variables
+// Typography
+$font-family-serif: "PT Serif",Georgia,Times,"Times New Roman",serif
+$font-size-base: 18px
+$headings-font-weight: bold
+@import "garamond-book/garamond-book.css"
+$font-family-base: "GaramondRegular",$font-family-serif
+// $headings-font-family: $font-family-sans-serif
+$line-height-base: 1.6
+$line-height-computed: floor(($font-size-base * $line-height-base))
+// colors
+$dark-maron: #665038
+$gray-dark: #1E2721
+$text-color: $gray-dark
+$brand-primary: darken(#d08907, 6.5%)
+$link-color: $brand-primary
+$link-hover-color: darken($link-color, 15%)
+$btn-primary-bg: $brand-primary
+$btn-primary-border: darken($btn-primary-bg, 5%)
+$component-active-bg: $brand-primary
+$list-group-active-bg: $component-active-bg
+$nav-pills-active-link-hover-bg: $component-active-bg
+$list-group-active-border: $list-group-active-bg
+$list-group-active-text-color: lighten($list-group-active-bg, 40%)
+// PANELS
+$panel-default-heading-bg: #fffef4
+$panel-default-border: #e3e3e3
+
+// navbar
+$navbar-default-color: lighten($link-color, 40%)
+$navbar-default-bg: $dark-maron
+$navbar-default-border: darken($navbar-default-bg, 6.5%)
+$navbar-default-link-color: lighten($link-color, 40%)
+$navbar-default-link-hover-color: $body-bg
+$navbar-default-link-active-color: $body-bg
+$navbar-default-toggle-icon-bar-bg: wheat
+$navbar-default-toggle-hover-bg: transparent
+
+// Icons
+$icon-font-path: "../assets/bootstrap/fonts/"
+
+// WELLS
+$well-bg:                     #fffef4
+$well-border:                 #e3e3e3
+
+// tables
+$table-border-color: $dark-maron
+
+@import "bootstrap/mixins"
+
+// Reset and dependencies
+@import "bootstrap/normalize"
+@import "bootstrap/print"
+@import "bootstrap/glyphicons"
+
+// Core CSS
+@import "bootstrap/scaffolding"
+@import "bootstrap/type"
+@import "bootstrap/code"
+@import "bootstrap/grid"
+@import "bootstrap/tables"
+@import "bootstrap/forms"
+@import "bootstrap/buttons"
+
+// Components
+@import "bootstrap/component-animations"
+@import "bootstrap/dropdowns"
+@import "bootstrap/button-groups"
+@import "bootstrap/input-groups"
+@import "bootstrap/navs"
+@import "bootstrap/navbar"
+@import "bootstrap/breadcrumbs"
+@import "bootstrap/pagination"
+@import "bootstrap/pager"
+@import "bootstrap/labels"
+@import "bootstrap/badges"
+@import "bootstrap/jumbotron"
+@import "bootstrap/thumbnails"
+@import "bootstrap/alerts"
+@import "bootstrap/progress-bars"
+@import "bootstrap/media"
+@import "bootstrap/list-group"
+@import "bootstrap/panels"
+@import "bootstrap/responsive-embed"
+@import "bootstrap/wells"
+@import "bootstrap/close"
+
+// Components w/ JavaScript
+@import "bootstrap/modals"
+@import "bootstrap/tooltip"
+@import "bootstrap/popovers"
+@import "bootstrap/carousel"
+
+// Utility classes
+@import "bootstrap/utilities"
+@import "bootstrap/responsive-utilities"
+
+// Final Touch
+
+table
+	@extend .table
+
+// Customization
+
+html
+	overflow-y: scroll
+	::selection
+		background: lighten($link-color, 40%)
+	body
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCc+PGZpbHRlciBpZD0nbic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9Jy43JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSc1MDAnIGhlaWdodD0nNTAwJyBmaWxsPScjRkZGRkYwJy8+PHJlY3Qgd2lkdGg9JzUwMCcgaGVpZ2h0PSc1MDAnIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0nMC40Jy8+PC9zdmc+)
+		// -webkit-font-smoothing: antialiased
+		// -moz-osx-font-smoothing: grayscale
+	main
+		// > h1:first-of-type
+		// 	@extend .page-header
+		// PANELS
+		div.panel-group:first-child
+			margin-top: 1.4em
+		a:not(.list-group-item):not([role="tab"]):not([role="button"])
+			text-decoration: underline
+
+// LIST GROUP
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus
+	background-image: url(/assets/images/noise-light-bg.svg)
+
+// NAVBAR
+.navbar-default
+	background: #665038 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCc+PGZpbHRlciBpZD0nbic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9Jy43JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSc1MDAnIGhlaWdodD0nNTAwJyBmaWxsPScjNDcyOTEwJy8+PHJlY3Qgd2lkdGg9JzUwMCcgaGVpZ2h0PSc1MDAnIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0nMC40Jy8+PC9zdmc+)
+	margin-top: 1em
+	& .navbar-nav
+		a
+			text-transform: uppercase
+		& > .active > a
+			&,
+			&:hover,
+			&:focus
+				color: $body-bg
+				background: $gray-dark url(/assets/images/noise-bg.svg)
+
+header
+	background: $gray-dark url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCc+PGZpbHRlciBpZD0nbic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9Jy43JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSc1MDAnIGhlaWdodD0nNTAwJyBmaWxsPScjZDk1MzQnLz48cmVjdCB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCcgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PScwLjQnLz48L3N2Zz4=)
+	color: lighten($link-color, 40%)
+	padding-top: 1em
+	margin-bottom: 2em
+
+footer
+	background: #665038 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCc+PGZpbHRlciBpZD0nbic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9Jy43JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSc1MDAnIGhlaWdodD0nNTAwJyBmaWxsPScjNDcyOTEwJy8+PHJlY3Qgd2lkdGg9JzUwMCcgaGVpZ2h0PSc1MDAnIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0nMC40Jy8+PC9zdmc+)
+	padding: 2em 0
+	margin-top: 4em
+	.nav > li > a
+		color: lighten($link-color, 40%)
+
+.glyphicon
+	// top: 1/9px
+	// margin-right: 0.2em
+	min-width: 1em

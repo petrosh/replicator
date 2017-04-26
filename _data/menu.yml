@@ -1,11 +1,41 @@
 -
   title: Home
   url: /
+  icon:
+    ra: crossbow
 
 -
   title: Code
   url: /code
+  icon:
+    ra: knife-fork
 
 -
   title: Total
   url: /total
+  icon:
+    glyphicon: euro
+
+-
+  title: Bootstrap
+  url: /bootstrap
+  icon:
+    glyphicon: glass
+
+-
+  title: Wide
+  url: /bootstrap-wide
+  icon:
+    glyphicon: tasks
+
+-
+  title: Double Column
+  url: /bootstrap-double
+  icon:
+    glyphicon: fire
+
+-
+  title: Ajax
+  url: /ajax
+  icon:
+    ra: lightning-trio
